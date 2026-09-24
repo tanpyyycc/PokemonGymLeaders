@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { KantoRegion } from './kanto-region/kanto-region';
 import { JohtoRegion } from './johto-region/johto-region';
+import { HoennRegion } from './hoenn-region/hoenn-region';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
@@ -12,9 +13,9 @@ import { CommonModule } from '@angular/common';
   styleUrl: './app.css'
 })
 export class App {
-  currentRegion: 'kanto' | 'johto' = 'kanto';
+  currentRegion: 'kanto' | 'johto' | 'hoenn'= 'kanto';
 
-  selectRegion(region: 'kanto' | 'johto') {
+  selectRegion(region: 'kanto' | 'johto' | 'hoenn') {
     this.currentRegion = region;
   }
 }

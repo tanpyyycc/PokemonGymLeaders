@@ -7,5 +7,6 @@ export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home', component: Home },
     { path: 'kanto', component: KantoRegion },
-    { path: 'johto', component: JohtoRegion }
+    { path: 'johto', component: JohtoRegion },
+    { path: 'hoenn', component: HoennRegion}
 ];
