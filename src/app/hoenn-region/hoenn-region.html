@@ -1,7 +1,22 @@
-<h2 class="region-title">Johto Region Gym Leaders</h2>
-
-<div class="card-grid">
-  @for (leader of leaders(); track leader.name) {
-    <app-leader-info [GymLeader]="leader"></app-leader-info>
-  }
+<!-- hoenn-gym-leaders.component.html -->
+<div class="gym-container">
+  <h2>Hoenn Gym Leaders</h2>
+  <div class="grid">
+    @for (leader of gymLeaders(); track leader.name) {
+      <div class="leader-card">
+        <h3>{{ leader.name }}</h3>
+        <p><strong>Town:</strong> {{ leader.town }}</p>
+        <p><strong>Specialty:</strong> {{ leader.specialty }}</p>
+        <p><strong>Badge:</strong> {{ leader.badge }}</p>
+        <div>
+          <strong>Pokemon Team:</strong>
+          <ul>
+            @for (pokemon of leader.pokemonTeam; track pokemon) {
+              <li>{{ pokemon }}</li>
+            }
+          </ul>
+        </div>
+      </div>
+    }
+  </div>
 </div>

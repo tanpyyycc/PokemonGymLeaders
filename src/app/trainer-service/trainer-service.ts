@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Injectable, signal } from '@angular/core';
+import { Injectable, signal, computed } from '@angular/core';
 
 @Component({
   imports: [],
@@ -8,7 +8,7 @@ import { Injectable, signal } from '@angular/core';
   templateUrl: './trainer-service.html',
 })
 export class TrainerService {
- private HoennGymLeaders = signal([
+ private hoennGymLeaders = signal([
     {
       name: 'Roxanne',
       age: 23,
@@ -56,7 +56,7 @@ export class TrainerService {
     },
     {
       name: 'Winona',
-      age: '34',
+      age: 34,
       badge: 'Feather Badge',
       town: 'Fortree City',
       team: [{name: 'Swellow', level: 31}, {name: 'Pelipper', level: 30}, {name: 'Skarmony', level: 32}, {name: 'Altaria', level: 33}],
@@ -81,7 +81,7 @@ export class TrainerService {
       specialty: 'Water Type'
 
     },
-
-    hoeenleaders = this.HoennGymLeaders.asReadonly();
-  ])
+    
+  ]); 
+  public hoeenleaders = computed(() => this.hoennGymLeaders());
 }
