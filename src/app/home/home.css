@@ -1,0 +1,65 @@
+.home-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  color: #333333;
+  line-height: 1.6;
+}
+
+.home-container h2 {
+  font-size: 2rem;
+  color: #1a43bf;
+  margin-bottom: 12px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.home-container > p {
+  text-align: center;
+  color: #555555;
+  font-size: 1.1rem;
+  margin-bottom: 35px;
+}
+
+.region-history {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .region-history {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.region-card {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 5px solid #2b91d2;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.region-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.region-card h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  color: #222222;
+  margin-bottom: 10px;
+}
+
+.region-card p {
+  margin: 0;
+  color: #444444;
+  font-size: 0.95rem;
+}

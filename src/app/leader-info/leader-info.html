@@ -1,0 +1,25 @@
+<div class="leader-card" [style.border-top-color]= GymLeader.typeColor>
+  <h3>{{ GymLeader.name }}</h3>
+  
+  <button (click)="onToggleMonologue()">Information on {{GymLeader.name}}</button>
+
+  @if (isOpen){
+    <div class="details-container">
+      <p><strong>Age:</strong> {{ GymLeader.age }}</p>
+      <p><strong>Location:</strong> {{ GymLeader.location }}</p>
+      <p><strong>Badge:</strong> {{ GymLeader.badge }}</p>
+      <p><em>{{ GymLeader.intro }}</em></p>
+      
+      <p><strong>Monologue:</strong> "{{ GymLeader.monologue }}"</p>
+      <p><strong>Description:</strong> {{ GymLeader.description }}</p>
+      <p><strong>Motto:</strong> "{{ GymLeader.motto }}"</p>
+
+      <h4>Pokémon Team:</h4>
+      <ul>
+        @for (pokemon of GymLeader.team; track pokemon.name) {
+          <li>{{ pokemon.name }} (Lv. {{ pokemon.level }})</li>
+        }
+      </ul>
+    </div>
+  }
+</div>

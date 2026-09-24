@@ -1,0 +1,29 @@
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.navigation-buttons a {
+  text-decoration: none;
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.navigation-buttons a:hover {
+  background-color: #d0d0d0;
+  transform: translateY(-2px);
+}
+
+/* This class is automatically applied by routerLinkActive */
+.navigation-buttons a.active {
+  background-color: #2b91d2;
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(43, 145, 210, 0.3);
+}
